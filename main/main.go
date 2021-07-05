@@ -16,7 +16,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fibn, err := fib.Fib2(n)
+	//	fibn, err := fib.Fib2(n)
+	fibn, err := fib.Fib3(n)
 	if err != nil {
 		log.Fatal(err)
 	} else {

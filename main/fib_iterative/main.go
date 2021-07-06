@@ -10,17 +10,20 @@ import (
 	"time"
 )
 
-func main() {
+func fibCaller(n int) int {
 	defer util.Timer(time.Now())
+	fibn, err := fib.Fib5(n)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return fibn
+}
+
+func main() {
 	n, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		log.Fatal(err)
 	}
-	//	fibn, err := fib.Fib2(n)
-	fibn, err := fib.Fib3(n)
-	if err != nil {
-		log.Fatal(err)
-	} else {
-		fmt.Printf("Fib %d is %d\n", n, fibn)
-	}
+	fibVal := fibCaller(n)
+	fmt.Printf("Fib %d is %d\n", n, fibVal)
 }

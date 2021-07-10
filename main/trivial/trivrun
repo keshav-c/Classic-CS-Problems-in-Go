@@ -1,4 +1,0 @@
-#! /bin/bash
-
-rm -f p.txt
-go run main.go p.txt 10

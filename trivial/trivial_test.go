@@ -1,7 +1,6 @@
 package trivial
 
 import (
-	//"errors"
 	"testing"
 )
 
